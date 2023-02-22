@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap');
+
+
+.nav-bar{
+    display: flex;
+    align-items: baseline;
+    padding-top: 10px;
+    background-color: #36517E;
+    color: white;
+    border-bottom: 1px solid #2b4166;
+    
+}
+
+.nav-bar h1{
+    padding-left: 1em;
+    font-family: 'Comfortaa', cursive;
+}
+
+.nav-bar ul{
+    display: flex;
+    align-items: baseline;
+    margin-left: 25em;
+    
+}
+
+.nav-bar li{
+    padding: 1em;
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-bar li:hover{
+    padding: 1em;
+    color: #1f2e49;
+    list-style: none;
+    cursor: pointer;
+}
+

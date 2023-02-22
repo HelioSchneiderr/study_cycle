@@ -1,0 +1,17 @@
+.apresentation{
+    padding-top: 12em;
+    display: flex;
+    margin-bottom: -100px;
+    justify-content: space-evenly;
+    background-color: #36517E;
+    
+}
+
+.apresentation-text{
+    margin: 10px;
+    width: 30%;
+}
+
+.apresentation-text p{
+    padding: 10px 0px 10px 0px;
+}

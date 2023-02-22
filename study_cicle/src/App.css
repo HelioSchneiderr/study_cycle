@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Open Sans', sans-serif; 
+    color: white;
+}
+
+body{
+    background-color:#36517E ; 
+}
+
+button{
+    color: white;
+    padding: 8px;
+    border: 2px solid rgb(28, 159, 211);
+    border-radius: 15px;
+    cursor: pointer;
+    width: 110px;
+    
+    background-color: #36517E;
+    transition: 0.3s;
+}
+
+button:hover{
+    transition: 0.3s;
+    
+    background-color:#293c5e ;
+    
+}
+
+h1{
+    font-family: 'Comfortaa', cursive;
+}
