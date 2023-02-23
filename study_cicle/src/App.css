@@ -11,7 +11,7 @@ body{
     background-color:#36517E ; 
 }
 
-button{
+.primary-button{
     color: white;
     padding: 8px;
     border: 2px solid rgb(28, 159, 211);
@@ -23,7 +23,7 @@ button{
     transition: 0.3s;
 }
 
-button:hover{
+.primary-button:hover{
     transition: 0.3s;
     
     background-color:#293c5e ;

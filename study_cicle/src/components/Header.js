@@ -10,7 +10,7 @@ const header = ({ makeCicle, homeLink, whatIs }) => {
           <ul>
               <li onClick={homeLink}>Home</li>
               <li onClick={whatIs}>Sobre</li>
-              <li onClick={ makeCicle } ><button>Fazer Ciclo</button></li>
+              <li onClick={ makeCicle } ><button className='primary-button'>Fazer Ciclo</button></li>
           </ul>
         </div>
     </div>
