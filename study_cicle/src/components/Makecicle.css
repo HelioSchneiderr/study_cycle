@@ -71,3 +71,33 @@
   .list li button:hover {
     background-color: #d32f2f;
   }
+
+.input-hours{
+    padding: 5px;
+    width: 40px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 2px solid #2b4166;
+    color: black;
+    margin-left: 10px;
+}
+
+.reset-hours{
+  display: flex;
+  position: relative;
+  width: 250px;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.reset-hours button{
+  margin-top: 1em;
+}
+
+
+
+#reset-button{
+  margin-left: 10px;
+}
