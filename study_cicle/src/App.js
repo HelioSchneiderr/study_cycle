@@ -1,12 +1,14 @@
 
-import { useState } from "react"
-
-import './App.css';
+import { useState} from "react"
 
 import Header from './components/Header';
 import Apresentation from './components/Apresentation';
 import Makecicle from "./components/Makecicle";
 import Whatis from "./components/Whatis";
+
+
+import './App.css';
+
 
 function App() {
 
@@ -31,7 +33,8 @@ function App() {
   }
 
   return (
-    <div>
+    
+      <div>
       <Header 
         makeCicle={ makeCicle } 
         homeLink={ homeLink } 
@@ -42,7 +45,9 @@ function App() {
       {stage === "init" && <Apresentation makeCicle={ makeCicle }></Apresentation> }
       {stage === "what-is" && <Whatis></Whatis>}
       {stage === "makecicle" && <Makecicle></Makecicle> }
-    </div>
+     </div>
+    
+
   );
 }
 
