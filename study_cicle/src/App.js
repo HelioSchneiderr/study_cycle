@@ -1,5 +1,6 @@
 
 import { useState} from "react"
+import { CicleProvider } from "./context/CicleContext";
 
 import Header from './components/Header';
 import Apresentation from './components/Apresentation';
@@ -33,7 +34,7 @@ function App() {
   }
 
   return (
-    
+      <CicleProvider>
       <div>
       <Header 
         makeCicle={ makeCicle } 
@@ -46,6 +47,7 @@ function App() {
       {stage === "what-is" && <Whatis></Whatis>}
       {stage === "makecicle" && <Makecicle></Makecicle> }
      </div>
+     </CicleProvider>
     
 
   );
