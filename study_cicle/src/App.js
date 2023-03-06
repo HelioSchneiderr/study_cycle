@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Apresentation from './components/Apresentation';
 import Makecicle from "./components/Makecicle";
 import Whatis from "./components/Whatis";
+import Ciclestudy from "./components/Ciclestudy";
 
 
 import './App.css';
@@ -16,14 +17,12 @@ function App() {
   const stages = [
     {id: 1, name: "init"},
     {id: 2, name: "what-is"},
-    {id: 3, name: "makecicle"}
+    {id: 3, name: "makecicle"},
+    {id: 4, name: "cicleStudy"}
   ];
 
   const [stage, setStage] = useState(stages[0].name)
 
-  const makeCicle = ()=>{
-    setStage(stages[2].name)
-  }
 
   const homeLink = ()=>{
     setStage(stages[0].name)
@@ -31,6 +30,14 @@ function App() {
 
   const whatIs = ()=>{
     setStage(stages[1].name)
+  }
+
+  const makeCicle = ()=>{
+    setStage(stages[2].name)
+  }
+
+  const cicleStudy = ()=>{
+    setStage(stages[3].name)
   }
 
   return (
@@ -45,7 +52,8 @@ function App() {
       {/*stage changes*/}
       {stage === "init" && <Apresentation makeCicle={ makeCicle }></Apresentation> }
       {stage === "what-is" && <Whatis></Whatis>}
-      {stage === "makecicle" && <Makecicle></Makecicle> }
+      {stage === "makecicle" && <Makecicle cicleStudy={ cicleStudy }></Makecicle> }
+      {stage === "cicleStudy" && <Ciclestudy></Ciclestudy>}
      </div>
      </CicleProvider>
     

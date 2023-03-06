@@ -1,0 +1,34 @@
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid rgb(38, 69, 172);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    background-color: #fff;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "\2714";
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    color: #007bff;
+    text-shadow: 0 0 2px #007bff;
+  }
+  
+  input[type="checkbox"]:hover {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }

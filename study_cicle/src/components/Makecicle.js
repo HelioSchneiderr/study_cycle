@@ -1,29 +1,16 @@
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import { CicleContext }   from "../context/CicleContext"
 import React from 'react'
 
 
 import "./Makecicle.css"
 
-const Makecicle = () => {
+const Makecicle = ({ cicleStudy }) => {
 
   const contextValue = useContext(CicleContext)
 
   console.log(contextValue.badList)
 
- 
-
-  let [hours, setHours] = useState([])
-  
-  function calculationHours(){
-    let total = contextValue.terribleList.length * 5 + contextValue.badList.length * 4 +contextValue.moreorlessList.length * 3
-    + contextValue.goodList.length * 2 + contextValue.excellentList.length * 1
-
-    let totalHours = hours/total
-
-
-    return (totalHours)
-}
 
 
 /*Functions of list*/
@@ -52,6 +39,7 @@ function deleteBadItem(index) {
   contextValue.setBadList(tmpArray)
 }
 
+console.log(contextValue.hours)
 
 function addMoreorlessList() {
   contextValue.setMoreorlessList([...contextValue.moreorlessList, contextValue.newMoreorlessList]);
@@ -108,7 +96,7 @@ function resetMatter(){
           </div>
           <div className='list-cicle'>
             <ul className="list">
-              {contextValue.terribleList.map((item, index) => (
+            {contextValue.terribleList.map((item, index) => (
                 <li>
                   <p>{item}</p> 
                   <button class="delete" onClick={()=> deleteTerribleItem(index)}>X</button>
@@ -189,9 +177,9 @@ function resetMatter(){
       </div>
       <div className="reset-hours">
         <label htmlFor="">Horas semanais:</label>
-        <input value={hours} onChange={value => setHours(value.target.value)} className="input-hours" type="number" min="6" max="168"/>
+        <input value={contextValue.hours} onChange={value => contextValue.setHours(value.target.value)} className="input-hours" type="number" min="6" max="168"/>
         <p>
-          <button className="primary-button" onClick={calculationHours()} >Criar Ciclo</button>
+          <button className="primary-button" onClick={ cicleStudy }>Criar Ciclo</button>
           <button id="reset-button" className="primary-button" onClick={()=> resetMatter()}>Resetar</button></p>
       </div>
     </div>
