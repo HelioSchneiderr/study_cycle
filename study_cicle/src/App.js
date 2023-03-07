@@ -53,7 +53,7 @@ function App() {
       {stage === "init" && <Apresentation makeCicle={ makeCicle }></Apresentation> }
       {stage === "what-is" && <Whatis></Whatis>}
       {stage === "makecicle" && <Makecicle cicleStudy={ cicleStudy }></Makecicle> }
-      {stage === "cicleStudy" && <Ciclestudy></Ciclestudy>}
+      {stage === "cicleStudy" && <Ciclestudy makeCicle={ makeCicle } ></Ciclestudy>}
      </div>
      </CicleProvider>
     

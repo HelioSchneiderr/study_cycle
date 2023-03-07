@@ -16,8 +16,12 @@ const Makecicle = ({ cicleStudy }) => {
 /*Functions of list*/
 
 function addNewTerrible() {
-  contextValue.setTerribleList([...contextValue.terribleList, contextValue.newTerrible]);
-  contextValue.setNewTerrible("")
+  if (contextValue.newTerrible.length >= 3) {
+    contextValue.setTerribleList([...contextValue.terribleList, contextValue.newTerrible]);
+    contextValue.setNewTerrible("")
+  }else{
+    alert("O conteúdo não pode está vazio ou ter menos de duas letras;")
+  }
 }
 
 function deleteTerribleItem(index) {
@@ -28,8 +32,12 @@ function deleteTerribleItem(index) {
 }
 
 function addNewBadList() {
-  contextValue.setBadList([...contextValue.badList, contextValue.newBadList]);
-  contextValue.setNewBadList("")
+  if (contextValue.newBadList.length >= 3) {
+    contextValue.setBadList([...contextValue.badList, contextValue.newBadList]);
+    contextValue.setNewBadList("")
+  }else{
+    alert("O conteúdo não pode está vazio ou ter menos de duas letras;")
+  }
 }
 
 function deleteBadItem(index) {
@@ -42,8 +50,12 @@ function deleteBadItem(index) {
 console.log(contextValue.hours)
 
 function addMoreorlessList() {
-  contextValue.setMoreorlessList([...contextValue.moreorlessList, contextValue.newMoreorlessList]);
-  contextValue.setNewMoreorlessList("")
+  if (contextValue.newMoreorlessList.length >= 3) {
+    contextValue.setMoreorlessList([...contextValue.moreorlessList, contextValue.newMoreorlessList]);
+    contextValue.setNewMoreorlessList("")
+  }else{
+    alert("O conteúdo não pode está vazio ou ter menos de duas letras;")
+  }
 }
 
 function deleteMoreorlessItem(index) {
@@ -54,8 +66,12 @@ function deleteMoreorlessItem(index) {
 }
 
 function addGoodList() {
-  contextValue.setGoodList([...contextValue.goodList, contextValue.newGoodList]);
-  contextValue.setNewMoreorlessList("")
+  if (contextValue.newGoodList.length >= 3) {
+    contextValue.setGoodList([...contextValue.goodList, contextValue.newGoodList]);
+    contextValue.setNewGoodList("")
+  }else{
+    alert("O conteúdo não pode está vazio ou ter menos de duas letras;")
+  }
 }
 
 function deleteGoodItem(index) {
@@ -66,8 +82,12 @@ function deleteGoodItem(index) {
 }
 
 function addExcellentList() {
-  contextValue.setExcellentList([...contextValue.excellentList, contextValue.newExcellentList]);
-  contextValue.setNewExcellentList("")
+  if (contextValue.newExcellentList.length >= 3) {
+    contextValue.setExcellentList([...contextValue.excellentList, contextValue.newExcellentList]);
+    contextValue.setNewExcellentList("")
+  }else{
+    alert("O conteúdo não pode está vazio ou ter menos de duas letras;")
+  }
 }
 
 function deleteExcellentItem(index) {
@@ -108,7 +128,7 @@ function resetMatter(){
         <div className="cicle">
           <div className='intern-cicle'>
             <h4>Ruim</h4>
-            <input value={contextValue.newBadList} onChange={value => contextValue.setNewBadList(value.target.value)} type="text"/>
+            <input value={contextValue.newBadList} onChange={value => contextValue.setNewBadList(value.target.value)} type="text" pattern=""/>
             <button onClick={()=>addNewBadList()}>Adicionar</button>
           </div>
           <div className='list-cicle'>
@@ -177,7 +197,14 @@ function resetMatter(){
       </div>
       <div className="reset-hours">
         <label htmlFor="">Horas semanais:</label>
-        <input value={contextValue.hours} onChange={value => contextValue.setHours(value.target.value)} className="input-hours" type="number" min="6" max="168"/>
+        <input value={contextValue.hours} onChange={event => {
+          const value = parseInt(event.target.value, 10); // converte para inteiro decimal
+          const minValue = 6;
+          const maxValue = 168;
+          const newValue = Math.max(minValue, Math.min(maxValue, value)); // limita o valor mínimo e máximo
+        
+          contextValue.setHours(newValue);
+      }} className="input-hours" type="number" min="6" max="168"/>
         <p>
           <button className="primary-button" onClick={ cicleStudy }>Criar Ciclo</button>
           <button id="reset-button" className="primary-button" onClick={()=> resetMatter()}>Resetar</button></p>
