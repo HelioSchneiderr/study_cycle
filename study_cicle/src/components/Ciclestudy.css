@@ -31,4 +31,55 @@ input[type="checkbox"] {
   
   input[type="checkbox"]:hover {
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-  }
+
+}
+
+
+.square{
+  margin-top: 10px;
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-evenly;
+}
+
+.square-cicle{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgb(54,81,126);
+  background: linear-gradient(183deg, rgba(54,81,126,1) 0%, rgba(34,66,101,1) 100%);
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 20px ;
+  max-width: 12rem;
+  width: 12rem;
+  text-align: center;
+}
+
+.square-cicle li {
+  margin-top: 10px;
+  list-style: none;
+}
+
+
+.square-cicle p{
+  margin: 7px 0px 7px 0px;
+  max-width: 12rem;
+  word-break: break-word;
+}
+
+.square-list-intern{
+  border-bottom: 1px solid white;
+  min-width: 11em;
+  background: rgb(54,81,126);
+  background: linear-gradient(183deg, rgba(54, 80, 126, 0) 0%, rgba(33, 57, 85, 0.342) 100%);
+  border-radius: 20px;
+  padding: 5px;
+  
+}
+
+
+.square-list-intern input{
+  margin: auto;
+  margin: 5px;
+}

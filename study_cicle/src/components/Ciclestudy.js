@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { CicleContext }   from "../context/CicleContext"
 
 import "./Ciclestudy.css"
@@ -11,83 +11,113 @@ const Ciclestudy = () => {
   const total = terribleList.length * 5 + badList.length * 4 + moreorlessList.length * 3
     + goodList.length * 2 + excellentList.length * 1;
   const totalHours = hours / total;
+  
+  // adiciona o estado para controlar a marcação dos checkboxes
+  const [isChecked, setIsChecked] = useState();
+
+  const handleReset = () => {
+    if(isChecked === false){
+      setIsChecked();
+    }
+    else{
+      setIsChecked(false)
+    }
+    
+  }
+
+  
+
+
 
   const renderSquare = (count) => {
     const squares = [];
     for (let i = count * totalHours; i >= 0; i--) {
-      squares.push(<input className='square-radio' type="checkbox" />);
+      squares.push(<input className='square-radio' type="checkbox" checked={isChecked} />);;
     }
     return squares;
   };
 
   return (
     <>
-      <div>
-        <div>
+      <div className='square'>
+        <div className='square-cicle'>
           <h4>Dificuldade Péssimo</h4>
-          <ul>
-            {terribleList.map((item) => (
-              <li key={item}>
-                <p>
-                  {item}
-                  {renderSquare(5)}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h4>Dificuldade Ruim</h4>
-          <ul>
+          <ul className='square-list'>
             {badList.map((item) => (
               <li key={item}>
-                <p>
-                  {item}
-                  {renderSquare(4)}
-                </p>
+                  <div className='square-list-intern'>
+                    <p>{item}</p>
+                    <div>{renderSquare(5)}</div>
+                  </div>
+                
               </li>
             ))}
           </ul>
         </div>
-        <div>
+        <div className='square-cicle'>
+          <h4>Dificuldade Ruim</h4>
+          <ul className='square-list'>
+            {badList.map((item) => (
+              <li key={item}>
+                  <div className='square-list-intern'>
+                    <p>{item}</p>
+                    <div>{renderSquare(4)}</div>
+                  </div>
+                
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className='square-cicle'>
           <h4>Dificuldade Mais ou Menos</h4>
-          <ul>
+          <ul className='square-list'>
             {moreorlessList.map((item) => (
               <li key={item}>
-                <p>
-                  {item}
-                  {renderSquare(3)}
-                </p>
+                  <div className='square-list-intern'>
+                    <p>{item}</p>
+                    <div>{renderSquare(3)}</div>
+                  </div>
+                
               </li>
             ))}
           </ul>
         </div>
-        <div>
+        <div className='square-cicle'>
           <h4>Dificuldade Bom</h4>
-          <ul>
+          <ul className='square-list'>
             {goodList.map((item) => (
               <li key={item}>
-                <p>
-                  {item}
-                  {renderSquare(2)}
-                </p>
+                
+                <div className='square-list-intern'>
+                    <p>{item}</p>
+                    <div>{renderSquare(2)}</div>
+                </div>
+                
               </li>
             ))}
           </ul>
         </div>
-        <div>
+        <div className='square-cicle'>
           <h4>Dificuldade Ótimo</h4>
-          <ul>
+          <ul className='square-list'>
             {excellentList.map((item) => (
               <li key={item}>
-                <p>
-                  {item}
-                  {renderSquare(1)}
-                </p>
+                
+                <div className='square-list-intern'>
+                    <p>{item}</p>
+                    <div>{renderSquare(1)}</div>
+                </div>
+                
               </li>
             ))}
           </ul>
         </div>
+      </div>
+      <div className="reset-hours">
+        
+        <p>
+          <button className="primary-button" >Novo Ciclo</button>
+          <button id="reset-button" className="primary-button" onClick={handleReset}>Resetar Ciclo</button></p>
       </div>
     </>
   );
