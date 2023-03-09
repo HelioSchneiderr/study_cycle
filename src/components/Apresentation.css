@@ -1,6 +1,8 @@
 .apresentation{
     padding-top: 12em;
     display: flex;
+    
+    flex-wrap: wrap;
     margin-bottom: -100px;
     justify-content: space-evenly;
     background-color: #36517E;
@@ -10,8 +12,16 @@
 .apresentation-text{
     margin: 10px;
     width: 30%;
+    min-width: 20em;
 }
 
 .apresentation-text p{
     padding: 10px 0px 10px 0px;
 }
+
+@media screen and (max-width: 660px) {
+    .apresentation {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }

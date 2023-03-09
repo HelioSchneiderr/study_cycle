@@ -1,20 +1,45 @@
-import React from 'react'
+import { useState } from "react"
 import "./Header.css"
 
-const header = ({ makeCicle, homeLink, whatIs }) => {
+
+const Header = ({ makeCicle, homeLink, whatIs }) => {
+
+  const[isOpen, setIsOpen] = useState(false)
+
+  const openMenuOrClose = ()=>{
+    setIsOpen(!isOpen)
+  }
+
+  console.log(isOpen)
+
   return (
     <div  className='header'>
         <div className='nav-bar'>
           <h1>Ciclo de Estudos</h1>
-       
-          <ul>
+          <div className="nav-list">
+            <ul >
               <li onClick={homeLink}>Home</li>
               <li onClick={whatIs}>Sobre</li>
               <li onClick={ makeCicle } ><button className='primary-button'>Fazer Ciclo</button></li>
-          </ul>
+            </ul>
+            <div className="menu-mobile">
+              <button type="button"  onClick={openMenuOrClose}><img src="https://stefanoskarakasis.com/images/icons/hamburger_icon_grey.png" alt="" width="30px" height="30px"/></button>
+            </div>
+          </div>
         </div>
-    </div>
+
+        <div className='nav-bar-mobile'>   
+          <div className={isOpen ? 'mobile-list-open' : 'mobile-list'}>
+              <ul>
+                <li>Home</li>
+                <li>Sobre</li>
+                <li>Fazer Ciclo</li>
+              </ul>
+          </div>
+        </div>
+
+      </div>
   )
 }
 
-export default header
+export default Header

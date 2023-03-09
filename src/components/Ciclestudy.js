@@ -25,9 +25,6 @@ const Ciclestudy = ({ makeCicle }) => {
     
   }
 
-  
-
-
 
   const renderSquare = (count) => {
     const squares = [];
@@ -130,7 +127,7 @@ const Ciclestudy = ({ makeCicle }) => {
         
         <p>
           <button className="primary-button" onClick={ makeCicle } >Novo Ciclo</button>
-          <button id="reset-button" className="primary-button" onClick={handleReset}>Resetar Ciclo</button></p>
+          <button id="reset-button" className="primary-button" onClick={()=>{handleReset();}}>Resetar Ciclo</button></p>
       </div>
     </>
   );

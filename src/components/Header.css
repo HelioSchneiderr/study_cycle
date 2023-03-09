@@ -13,6 +13,7 @@
 
 .nav-bar h1{
     padding-left: 1em;
+    min-width: 10em;
     font-family: 'Comfortaa', cursive;
 }
 
@@ -36,3 +37,39 @@
     cursor: pointer;
 }
 
+.nav-bar-mobile{
+    display: none;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 1040px) {
+    
+    .nav-bar li{
+        display: none;
+    }
+
+    .menu-mobile{
+        display: block;
+    }
+
+    .mobile-list-open{
+        display: block;
+        background-color: rgb(44, 22, 22);
+    }
+    
+    .nav-bar-mobile {
+      display: block;
+    }
+
+    .nav-bar{
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav-bar h1{
+        padding: 16px;
+    }
+}
