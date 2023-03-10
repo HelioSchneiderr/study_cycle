@@ -29,13 +29,20 @@ const Header = ({ makeCicle, homeLink, whatIs }) => {
         </div>
 
         <div className='nav-bar-mobile'>   
-          <div className={isOpen ? 'mobile-list-open' : 'mobile-list'}>
+          {isOpen ? 
+          
+          null
+          
+          : 
+            <div className="nav-bar-list-mobile">
               <ul>
                 <li>Home</li>
                 <li>Sobre</li>
                 <li>Fazer Ciclo</li>
               </ul>
-          </div>
+            </div>
+            
+          } 
         </div>
 
       </div>
