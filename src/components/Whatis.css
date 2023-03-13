@@ -1,5 +1,6 @@
 .what-is{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 4rem;
     
@@ -25,4 +26,16 @@
     padding-top: 10px;
     font-family: 'Comfortaa', cursive;
     background-color:#4f78be ; 
+}
+
+@media screen and (max-width: 650px) {
+    
+    .what-is{
+        flex-wrap: wrap-reverse; 
+    }
+
+    .what-is-text{
+        width: 70%;
+ 
+    }
 }

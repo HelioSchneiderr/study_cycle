@@ -62,7 +62,7 @@ const Ciclestudy = ({ makeCicle }) => {
                 <li key={item}>
                     <div className='square-list-intern'>
                       <p>{item}</p>
-                      <div>{renderSquare(1)}</div>
+                      <div>{renderSquare(4)}</div>
                     </div>   
                 </li>
               ))}

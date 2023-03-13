@@ -38,11 +38,13 @@ input[type="checkbox"] {
 .square{
   margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items:flex-start;
-  justify-content: space-evenly;
 }
 
 .square-cicle{
+  margin: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -4,7 +4,7 @@ import "./Header.css"
 
 const Header = ({ makeCicle, homeLink, whatIs }) => {
 
-  const[isOpen, setIsOpen] = useState(false)
+  const[isOpen, setIsOpen] = useState(true)
 
   const openMenuOrClose = ()=>{
     setIsOpen(!isOpen)

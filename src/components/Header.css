@@ -4,6 +4,7 @@
 .nav-bar{
     display: flex;
     justify-content: space-evenly;
+    
     align-items: baseline;
     padding-top: 10px;
     background-color: #36517E;
@@ -47,9 +48,7 @@
     
 }
 
-.nav-bar-list-mobile{
-    background-color:#2b4166;
-}
+
 
 .nav-bar-list-mobile li{
     padding: 10px 10px 10px 10px;
@@ -58,7 +57,7 @@
 
 
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 1030px) {
     
     .nav-bar li{
         display: none;
@@ -70,8 +69,14 @@
 
     .menu-mobile{
         display: block;
-        margin-left: 20;
-        
+        margin-left: 20em;
+         
+    }
+
+    .menu-mobile button{
+        border: none;
+        cursor: pointer;
+        background-color: transparent;  
     }
 
     .nav-bar-mobile{
@@ -88,5 +93,12 @@
 
     .nav-bar h1{
         padding: 16px;
+    
+    }
+    .nav-bar-list-mobile{
+        transition: 1s;
+        background-color:#36517E;
+        border-bottom: 1px solid #2b4166;
+        
     }
 }

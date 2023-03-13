@@ -2,12 +2,16 @@
 
 .flex-cicle{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     margin-top: 5em;  
 }
 
 .cicle{
   width: 14em;
+  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .intern-cicle{
