@@ -36,9 +36,9 @@ const Header = ({ makeCicle, homeLink, whatIs }) => {
           : 
             <div className="nav-bar-list-mobile">
               <ul>
-                <li>Home</li>
-                <li>Sobre</li>
-                <li>Fazer Ciclo</li>
+                <li onClick={homeLink}>Home</li>
+                <li onClick={whatIs}>Sobre</li>
+                <li onClick={ makeCicle}>Fazer Ciclo</li>
               </ul>
             </div>
             
