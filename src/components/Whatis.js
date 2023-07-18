@@ -15,7 +15,7 @@ Um ciclo de estudos é um plano estruturado de estudos com o objetivo de alcanç
         <button className='primary-button' >Fazer Ciclo</button>
       </div>
       <div>
-        <img src="https://usp.com.pk/wp-content/uploads/2020/01/illustration19.png" alt="" width="500px" heigth="500px"/>
+        <img src="https://cdn2.iconfinder.com/data/icons/market-research-shades-vol-2/128/LONGITUDINAL_STUDY-512.png" alt="" width="500px" heigth="500px"/>
       </div>  
     </div>
   )
