@@ -52,6 +52,7 @@
 
 .nav-bar-list-mobile li{
     padding: 10px 10px 10px 10px;
+    cursor: pointer;
 }
 
 
@@ -61,10 +62,12 @@
     
     .nav-bar li{
         display: none;
+        cursor: pointer;
     }
 
     .nav-bar h1{
         min-width: 1em; 
+        
     }
 
     .menu-mobile{
